@@ -27,17 +27,38 @@ powershell -ExecutionPolicy Bypass -File "C:\Users\yetig\.openclaw\workspace\ski
 
 The wrapper sends:
 
-- `Authorization: Bearer <GHL_API_KEY>`
+- `Authorization: Bearer <GHL_PRIVATE_INTEGRATION>` when available
+- otherwise `Authorization: Bearer <GHL_API_KEY>` as fallback
 - `Version: 2021-07-28`
 - `Accept: application/json`
 - `Content-Type: application/json`
 - `Location-Id: <GHL_LOCATION_ID>`
 
-Adjust later if the specific endpoint expects different auth/header conventions.
+For API v2, prefer the Private Integration Token (PIT). API keys are legacy and may fail on v2 endpoints.
 
 ## First checks
 
 Start with safe read-only endpoints and inspect response codes before building automations.
+
+## Orders endpoint gotcha
+
+For GHL payments orders, `locationId` alone is not enough for reliable requests.
+Use the documented query shape:
+
+- `altId=<GHL_LOCATION_ID>`
+- `altType=location`
+- optionally also `locationId=<GHL_LOCATION_ID>`
+
+Working example:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File "C:\Users\yetig\.openclaw\workspace\skills\gohighlevel-api\scripts\ghl-request.ps1" -Method GET -Path "/payments/orders?altId=ByIxX8buwoJFmGiGZWK1&altType=location&locationId=ByIxX8buwoJFmGiGZWK1&limit=100"
+```
+
+For "open orders" in practice, filter for records where:
+
+- `fulfillmentStatus = unfulfilled`
+- and/or `status = pending`
 
 ## Automation
 

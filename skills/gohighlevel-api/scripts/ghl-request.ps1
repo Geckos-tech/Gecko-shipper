@@ -17,14 +17,17 @@ Get-Content $envFile |
     [Environment]::SetEnvironmentVariable($name, $value, 'Process')
   }
 
+$privateIntegration = [Environment]::GetEnvironmentVariable('GHL_PRIVATE_INTEGRATION', 'Process')
 $apiKey = [Environment]::GetEnvironmentVariable('GHL_API_KEY', 'Process')
 $locationId = [Environment]::GetEnvironmentVariable('GHL_LOCATION_ID', 'Process')
 
-if (-not $apiKey) { throw 'Missing GHL_API_KEY' }
+$token = if ($privateIntegration) { $privateIntegration } elseif ($apiKey) { $apiKey } else { $null }
+
+if (-not $token) { throw 'Missing GHL_PRIVATE_INTEGRATION or GHL_API_KEY' }
 if (-not $locationId) { throw 'Missing GHL_LOCATION_ID' }
 
 $headers = @{
-  Authorization = "Bearer $apiKey"
+  Authorization = "Bearer $token"
   Version = '2021-07-28'
   Accept = 'application/json'
   'Content-Type' = 'application/json'

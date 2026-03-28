@@ -25,7 +25,8 @@ Expected variables:
 2. Load env vars from `integrations/gohighlevel/.env` in the shell session.
 3. Use `scripts/ghl-request.ps1` for PowerShell-based API calls.
 4. Start by testing a safe read endpoint before doing writes.
-5. For recurring tasks, create wrapper scripts or cron jobs that call the script with explicit endpoints and methods.
+5. For payments orders, include `altId=<locationId>` and `altType=location` in the query string; `locationId` alone may not work.
+6. For recurring tasks, create wrapper scripts or cron jobs that call the script with explicit endpoints and methods.
 
 ## Files
 
