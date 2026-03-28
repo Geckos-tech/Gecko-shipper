@@ -10,7 +10,8 @@ _Learn about the person you're helping. Update this as you go._
 
 ## Context
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- Asked for help getting OpenClaw and Telegram access working.
+- Prefers practical help over ceremony.
 
 ---
 
