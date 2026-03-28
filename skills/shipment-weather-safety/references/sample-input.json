@@ -1,0 +1,23 @@
+{
+  "orderId": "sample-order-1001",
+  "shipmentDate": "2026-03-27",
+  "service": "FEDEX_PRIORITY_OVERNIGHT",
+  "checkedPoints": [
+    {
+      "type": "origin",
+      "label": "Origin facility",
+      "forecast": {
+        "lowF": 52,
+        "highF": 74
+      }
+    },
+    {
+      "type": "destination",
+      "label": "Destination address",
+      "forecast": {
+        "lowF": 47,
+        "highF": 69
+      }
+    }
+  ]
+}

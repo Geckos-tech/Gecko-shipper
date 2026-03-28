@@ -1,0 +1,19 @@
+{
+  "packagingType": "YOUR_PACKAGING",
+  "weight": {
+    "units": "LB",
+    "value": 1
+  },
+  "dimensions": {
+    "units": "IN",
+    "length": 12,
+    "width": 9,
+    "height": 6
+  },
+  "labelSpecification": {
+    "imageType": "PDF",
+    "labelStockType": "PAPER_85X11_TOP_HALF_LABEL"
+  },
+  "serviceTypeOverride": null,
+  "signatureOptionType": "SERVICE_DEFAULT"
+}

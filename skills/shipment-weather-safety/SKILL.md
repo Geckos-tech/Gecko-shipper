@@ -27,6 +27,22 @@ Read `references/policy.md` for the current safety thresholds and decision rule.
 
 - `references/policy.md`
 - `references/workflow.md`
+- `references/shipping-agent-pdr-slice.md`
+- `references/sample-input.json`
+- `references/sample-weather-input.json`
+- `references/ghl-order-normalization.md`
+- `references/address-enrichment.md`
+- `references/origin-destination-evaluation.md`
+- `references/one-shot-runner.md`
+- `references/transit-aware-logic.md`
+- `references/operator-safety-gate.md`
+- `scripts/Invoke-ShipmentSafetyEvaluation.ps1`
+- `scripts/Get-WeatherForShipmentPoint.ps1`
+- `scripts/Invoke-ShipmentSafetyWithWeather.ps1`
+- `scripts/Convert-GhlOrderToShipmentInput.ps1`
+- `scripts/Build-SampleShipmentInputFromLatestGhlOrder.ps1`
+- `scripts/Get-LatLonForAddress.ps1`
+- `scripts/Build-WeatherReadyShipmentInputFromLatestGhlOrder.ps1`
 
 ## Safety
 

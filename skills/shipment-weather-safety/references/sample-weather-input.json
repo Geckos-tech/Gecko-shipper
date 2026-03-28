@@ -1,0 +1,19 @@
+{
+  "orderId": "sample-order-weather-1002",
+  "shipmentDate": "2026-03-28",
+  "service": "FEDEX_PRIORITY_OVERNIGHT",
+  "checkedPoints": [
+    {
+      "type": "origin",
+      "label": "Raleigh, NC origin",
+      "latitude": 35.7796,
+      "longitude": -78.6382
+    },
+    {
+      "type": "destination",
+      "label": "Atlanta, GA destination",
+      "latitude": 33.749,
+      "longitude": -84.388
+    }
+  ]
+}
