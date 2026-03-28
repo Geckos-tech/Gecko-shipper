@@ -24,3 +24,5 @@ A draft shipment payload that is formatted for eventual FedEx shipment/label cre
 ## Purpose
 
 This lets the workflow mature toward label creation without crossing the line into live purchasing.
+
+The next controlled phase is shipment validation against FedEx without live label purchase.
