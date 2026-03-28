@@ -45,7 +45,7 @@ if ($BodyFile) {
   if (-not (Test-Path $BodyFile)) {
     throw "Body file not found: $BodyFile"
   }
-  $invokeParams.Body = Get-Content $BodyFile -Raw
+  $invokeParams.Body = [System.IO.File]::ReadAllText($BodyFile, [System.Text.Encoding]::UTF8)
 }
 
 $response = Invoke-RestMethod @invokeParams
