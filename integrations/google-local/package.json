@@ -1,0 +1,17 @@
+{
+  "name": "google-local",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local Gmail and Contacts read-only wrappers with separate auth stores",
+  "type": "commonjs",
+  "scripts": {
+    "auth:gmail": "node scripts/auth-gmail.js",
+    "auth:contacts": "node scripts/auth-contacts.js",
+    "test:gmail": "node scripts/test-gmail.js",
+    "test:contacts": "node scripts/test-contacts.js",
+    "google-local": "node scripts/google-local.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}
